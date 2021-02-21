@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nsdk_white_color"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <ImageView
+        android:id="@+id/route_panorama_full_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:background="@drawable/nsdk_drawable_common_btn_menu" />
+
+    <LinearLayout
+        android:id="@+id/route_pano_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e5364360"
+        android:orientation="vertical">
+
+        <com.baidu.navisdk.ui.widget.EmptyTopLayout
+            android:id="@+id/pano_status_empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 标题栏 -->
+        <RelativeLayout
+            android:id="@+id/pano_title_container"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center_vertical">
+
+            <!-- 退出按钮 -->
+            <ImageView
+                android:id="@+id/pano_back"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bnav_ugc_preview_back_white" />
+
+
+            <TextView
+                android:id="@+id/pano_road_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                tools:text="预览111111111111111111111" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/route_pano_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/nsdk_baidu_map_logo" />
+
+
+</merge>

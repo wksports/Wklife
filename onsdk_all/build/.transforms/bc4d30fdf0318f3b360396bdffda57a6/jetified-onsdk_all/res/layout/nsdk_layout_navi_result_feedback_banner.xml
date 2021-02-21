@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nsdk_navi_result_fb_banner_height"
+    android:layout_marginTop="@dimen/nsdk_navi_result_fb_banner_margin_top"
+    android:layout_marginBottom="@dimen/nsdk_navi_result_fb_banner_margin_bottom"
+    android:background="@drawable/nsdk_nav_result_fb_banner_bg"
+    android:paddingHorizontal="10dp">
+
+    <TextView
+        android:id="@+id/navi_result_feedback_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nsdk_navi_result_fb_banner_btn_height"
+        android:background="@drawable/bnav_result_fb_banner_btn_bg"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:minWidth="74dp"
+        android:maxEms="6"
+        android:textColor="#3385ff"
+        android:textSize="13sp"
+        android:visibility="visible"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="导航问题" />
+
+    <TextView
+        android:id="@+id/navi_result_feedback_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nsdk_navi_result_fb_banner_btn_height"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bnav_result_fb_banner_btn_bg"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:minWidth="74dp"
+        android:maxEms="6"
+        android:textColor="#3385ff"
+        android:textSize="13sp"
+        android:visibility="visible"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/navi_result_feedback_btn2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginRight="0dp"
+        tools:text="个人问题" />
+
+    <TextView
+        android:id="@+id/navi_result_feedback_banner_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="2"
+        android:textColor="@color/nsdk_white_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/navi_result_feedback_btn1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/nsdk_navi_result_feedback_success_tip" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

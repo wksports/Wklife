@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/extreme_weather"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginBottom="3dp">
+
+        <ImageView
+            android:id="@+id/extreme_weather_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            tools:src="@drawable/nsdk_drawable_route_result_intelli_drive_weather_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/extreme_weather_icon"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/extreme_weather_high_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#333333"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:text="25" />
+
+                <TextView
+                    android:id="@+id/extreme_weather_split_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_toRightOf="@id/extreme_weather_high_temp"
+                    android:layout_alignBottom="@id/extreme_weather_high_temp"
+                    android:textColor="#333333"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="/" />
+
+                <TextView
+                    android:id="@+id/extreme_weather_low_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_toRightOf="@id/extreme_weather_split_line"
+                    android:layout_alignBottom="@id/extreme_weather_high_temp"
+                    android:paddingBottom="1px"
+                    android:textColor="#333333"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    tools:text="8℃" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/extreme_weather_city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textSize="13dp"
+                    android:textColor="#3385FF"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/nsdk_drawable_route_result_extreme_weather_city_name_background"
+                    tools:text="南通市" />
+
+                <TextView
+                    android:id="@+id/extreme_weather_eta_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/extreme_weather_city_name"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#333333"
+                    android:textSize="13dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="预计明天(6.23)到达" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dest_weather_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/extreme_weather"
+        android:background="#F0F0F0" />
+
+    <TextView
+        android:id="@+id/dest_weather_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/extreme_weather"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:textSize="13dp"
+        tools:text="终点兰州市未来七天天气情况" />
+
+    <LinearLayout
+        android:id="@+id/dest_daily_weathers"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@id/dest_weather_title"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

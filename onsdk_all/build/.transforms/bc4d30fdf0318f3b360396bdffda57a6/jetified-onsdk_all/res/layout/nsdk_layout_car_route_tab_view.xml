@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <FrameLayout
+        android:id="@+id/tabs_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/multi_tabs_container"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.multi.CarMultiRouteTabItem
+                android:id="@+id/multi_tabs_one"
+                style="@style/MultiRouteTabItem"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/nsdk_drawable_route_result_route_tabs_item_background" />
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.multi.CarMultiRouteTabItem
+                android:id="@+id/multi_tabs_two"
+                style="@style/MultiRouteTabItem"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/nsdk_drawable_route_result_route_tabs_item_background" />
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.multi.CarMultiRouteTabItem
+                android:id="@+id/multi_tabs_three"
+                style="@style/MultiRouteTabItem"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/nsdk_drawable_route_result_route_tabs_item_background" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/single_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.single.CarSingleRouteTabItem
+                android:id="@+id/single_tab"
+                style="@style/SingleRouteTabItem"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/nsdk_drawable_route_result_route_tabs_item_background" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignBottom="@id/tabs_container"
+        android:background="#E4E4E4"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/item_selected_line_container"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@id/split_line"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/item_selected_line1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/nsdk_drawable_route_result_route_tab_split_line"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/item_selected_line2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/nsdk_drawable_route_result_route_tab_split_line"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/item_selected_line3"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:src="@drawable/nsdk_drawable_route_result_route_tab_split_line"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+</merge>

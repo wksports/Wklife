@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--detail panel-->
+    <RelativeLayout
+        android:id="@+id/pass_route_detail_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nsdk_rr_pass_road_right_big"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--名字-->
+                <TextView
+                    android:id="@+id/pass_route_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="京新高速"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+
+                <!--分割线-->
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="11dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#e5e5e5" />
+
+                <!--车道-->
+                <TextView
+                    android:id="@+id/pass_route_num_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="2-5车道"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--限速-->
+            <TextView
+                android:id="@+id/pass_speed_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="100-120km/h"
+                android:textColor="#333333"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--simple panel-->
+    <LinearLayout
+        android:id="@+id/navi_guodao_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        tools:background="@drawable/nsdk_rr_pass_road_right_small"
+        tools:visibility="visible">
+        <!--标签-->
+        <TextView
+            android:id="@+id/guodao_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bnav_bg_pass_road_guodao_label"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="国道"
+            android:textColor="@android:color/white"
+            android:textSize="11dp"
+            android:textStyle="bold" />
+        <!--名字-->
+        <TextView
+            android:id="@+id/guodao_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:text="走向成功的道路"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

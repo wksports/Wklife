@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bnav_horizontal_menu_btn_img"
+        android:layout_width="@dimen/navi_dimens_28dp"
+        android:layout_height="@dimen/navi_dimens_28dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/bnav_horizontal_menu_btn_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bnav_horizontal_menu_btn_img"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/navi_dimens_10dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

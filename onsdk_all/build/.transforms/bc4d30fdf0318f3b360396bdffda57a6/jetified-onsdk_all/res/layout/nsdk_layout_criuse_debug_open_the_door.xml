@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:gravity="center_vertical|left"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/navi_dimens_10dp">
+
+    <Button
+        android:id="@+id/debug_gate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Debug"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/debug_gate_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/navi_dimens_20dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/cruise_speed_list"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/navi_dimens_20dp"
+            android:background="#adb"
+            android:gravity="center"
+            android:text="超速 80"
+            android:textColor="#000"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cruise_speed_hide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/navi_dimens_10dp"
+            android:background="#adb"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="速度 --"
+            android:textColor="#000"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cruise_gps_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/navi_dimens_10dp"
+            android:background="#adb"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="卫星 丢失"
+            android:textColor="#000"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cruise_debug_camera_limit_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/navi_dimens_10dp"
+            android:background="#adb"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="限速拍照"
+            android:textColor="#000"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/cruise_debug_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/navi_dimens_10dp"
+            android:padding="5dp"
+            android:background="#adb"
+            android:gravity="center"
+            android:text="电子眼"
+            android:textColor="#000"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</LinearLayout>

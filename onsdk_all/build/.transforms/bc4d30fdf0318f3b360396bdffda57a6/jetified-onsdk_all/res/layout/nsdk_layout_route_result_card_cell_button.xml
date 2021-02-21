@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.RelativeLayout"
+    android:background="@drawable/bnav_route_result_dynamic_card_button_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="37dp">
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="#333333"
+        tools:text="按钮111111111"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/nsdk_drawable_rr_dynamic_card_button_right_arrow"
+        />
+</merge>

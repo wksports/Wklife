@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNFrameLayout">
+
+    <com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNRelativeLayout
+        android:id="@+id/nav_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="13dp">
+
+        <View
+            android:id="@+id/loading_view"
+            android:layout_width="98dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nsdk_drawable_route_result_loading_card_item_background"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/to_pro_nav"
+            android:layout_width="125dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/nsdk_light_navi_to_nav_bg_selector"
+            android:gravity="center"
+            android:text="@string/nsdk_route_result_start_guide"
+            android:layout_marginRight="@dimen/navi_dimens_11dp"
+            android:textColor="@color/nsdk_route_result_to_nav_btn_text_selector"
+            android:textSize="16dp"
+            tools:visibility="visible" />
+
+        <TextView
+                android:id="@+id/to_other_nav"
+                android:layout_width="88dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/to_pro_nav"
+                android:background="@drawable/nsdk_route_result_light_btn_bg_selector"
+                android:gravity="center"
+                android:text="@string/nsdk_route_result_to_light"
+                android:textColor="@color/nsdk_route_result_radar_btn_text_selector"
+                android:textSize="16dp"
+                tools:visibility="visible" />
+
+        <ImageView
+                android:id="@+id/moss_guide_red_point"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_alignTop="@+id/to_other_nav"
+                android:layout_alignRight="@+id/to_other_nav"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bnav_bg_route_result_moss_btn_red_point"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/drive_suggest"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@id/to_other_nav"
+            android:layout_marginRight="4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/drive_suggest_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/nsdk_drawable_route_result_drive_suggest" />
+
+            <TextView
+                android:id="@+id/drive_suggest_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/drive_suggest_icon"
+                android:layout_marginLeft="6dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="5条出行建议"
+                android:textSize="14dp"
+                android:textColor="#333333" />
+        </RelativeLayout>
+    </com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNRelativeLayout>
+
+</merge>

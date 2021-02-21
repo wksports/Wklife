@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/yellow_message_content_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:parentTag="android.widget.RelativeLayout">
+
+    <!-- 消息按钮独立 -->
+    <LinearLayout
+            android:id="@+id/btn_yellow_message"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/nsdk_drawable_rr_yellow_message_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+        <com.baidu.navisdk.ui.widget.AnimationImageView
+            android:id="@+id/yellow_message_button_iv"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:src="@drawable/nsdk_drawable_yellow_message_btn_ic20" />
+
+        <TextView
+                android:id="@+id/yellow_message_button_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbox_iv"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="提示"
+                android:textColor="#ffffff"
+                android:textSize="9dp"
+                android:visibility="visible" />
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/yellow_message_button_label"
+            android:layout_width="15dp"
+            android:layout_height="12dp"
+            android:layout_alignTop="@id/btn_yellow_message"
+            android:layout_alignRight="@id/btn_yellow_message"
+            android:layout_marginTop="-3dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/nsdk_drawable_route_result_toolbox_red_circle2"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#ffffff"
+            android:textSize="8dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+</RelativeLayout>

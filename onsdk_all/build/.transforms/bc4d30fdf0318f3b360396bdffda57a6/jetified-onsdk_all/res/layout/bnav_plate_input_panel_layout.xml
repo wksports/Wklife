@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bnav_bg_attribution_panel">
+
+    <ImageView
+        android:id="@+id/plate_btn_close"
+        android:layout_width="@dimen/navi_dimens_29dp"
+        android:layout_height="@dimen/navi_dimens_29dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/navi_dimens_22dp"
+        android:layout_marginRight="@dimen/navi_dimens_19dp"
+        android:src="@drawable/bnav_plate_input_close" />
+
+    <LinearLayout
+        android:id="@+id/plate_input_main_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/navi_dimens_19dp"
+        android:paddingTop="@dimen/navi_dimens_25dp"
+        android:paddingRight="@dimen/navi_dimens_19dp"
+        android:paddingBottom="@dimen/navi_dimens_30dp">
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/navi_dimens_30dp"
+            android:gravity="center"
+            android:text="添加车牌"
+            android:textColor="#333333"
+            android:textSize="@dimen/navi_dimens_19dp" />
+
+
+        <LinearLayout
+            android:id="@+id/plate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/navi_dimens_30dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/bnav_plate_input_layout" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/navi_dimens_15dp"
+                android:layout_marginBottom="@dimen/navi_dimens_15dp"
+                android:background="#EAEAEA" />
+
+            <ViewStub
+                android:id="@+id/car_energy_type_viewstub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/nsdk_layout_car_energy_type" />
+
+            <ViewStub
+                android:id="@+id/motor_displacement_viewstub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/nsdk_layout_motor_displacement" />
+
+
+        </LinearLayout>
+
+        <include layout="@layout/bnav_plate_input_panel_complete_btn_layout" />
+
+
+    </LinearLayout>
+
+    <com.baidu.navisdk.module.routeresult.view.support.module.limit.inputplate.PlateAttributionView
+        android:id="@+id/attribution_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plate_input_main_panel"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <TextView
+        android:id="@+id/three_d_car_logo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/navi_dimens_30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/navi_dimens_13dp"
+        android:text="选择3D车标"
+        android:gravity="center_vertical"
+        android:textColor="@color/nsdk_cl_text_b_mm_title"
+        android:textSize="@dimen/navi_dimens_18dp" />
+
+    <com.baidu.navisdk.ui.widget.BNDrawableTextView
+        android:id="@+id/three_d_car_logo_more"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/navi_dimens_30dp"
+        android:layout_alignBottom="@id/three_d_car_logo_title"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="@dimen/navi_dimens_4dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/navi_dimens_15dp"
+        android:paddingRight="@dimen/navi_dimens_15dp"
+        android:text="更多"
+        android:textColor="@color/nsdk_cl_text_a_mm"
+        android:textSize="@dimen/navi_dimens_13dp"
+        app:nsdk_bn_text_drawable_height="@dimen/navi_dimens_8dp"
+        app:nsdk_bn_text_drawable_location="right"
+        app:nsdk_bn_text_drawable_src="@drawable/nsdk_driving_habit_right_arrow"
+        app:nsdk_bn_text_drawable_width="@dimen/navi_dimens_5dp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/three_d_car_logo_viewpage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_dimens_110dp"
+        android:layout_below="@id/three_d_car_logo_title"
+        android:layout_marginTop="@dimen/navi_dimens_12dp"
+        android:clipToPadding="false"
+        android:paddingLeft="@dimen/navi_dimens_30dp"
+        android:paddingRight="@dimen/navi_dimens_30dp" />
+
+    <TextView
+        android:id="@+id/three_d_car_logo_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/three_d_car_logo_viewpage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/navi_dimens_3dp"
+        android:textColor="@color/nsdk_cl_text_a_mm"
+        android:textSize="@dimen/navi_dimens_12dp"
+        android:visibility="gone"
+        tools:text="车标占用空间5MB"
+        tools:visibility="visible" />
+
+    <HorizontalScrollView
+        android:id="@+id/car_logo_color_horizontal_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/navi_dimens_29dp"
+        android:layout_below="@id/three_d_car_logo_viewpage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/navi_dimens_3dp"
+        android:background="@null"
+        android:paddingLeft="@dimen/navi_dimens_30dp"
+        android:paddingRight="@dimen/navi_dimens_30dp"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.baidu.navisdk.module.carlogo.views.ThreeDColorLayout
+            android:id="@+id/three_d_car_logo_color_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/navi_dimens_10dp"
+            android:paddingRight="@dimen/navi_dimens_10dp" />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/three_d_car_logo_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_dimens_37dp"
+        android:layout_below="@id/three_d_car_logo_viewpage"
+        android:layout_marginLeft="@dimen/navi_dimens_15dp"
+        android:layout_marginTop="@dimen/navi_dimens_54dp"
+        android:layout_marginRight="@dimen/navi_dimens_15dp"
+        android:layout_marginBottom="@dimen/navi_dimens_13dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/three_d_car_logo_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/nsdk_drawable_rg_operable_notification_cancel_btn"
+            android:text="@string/alert_cancel"
+            android:textColor="@color/nsdk_cl_text_b_mm"
+            android:textSize="@dimen/navi_dimens_14dp" />
+
+        <Button
+            android:id="@+id/three_d_car_logo_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/navi_dimens_15dp"
+            android:layout_weight="1"
+            android:background="@drawable/nsdk_drawable_rg_3d_car_logo_confirm_btn"
+            android:textColor="@color/nsdk_drawable_rg_3d_car_logo_confirm_textcolor"
+            android:textSize="@dimen/navi_dimens_14dp"
+            tools:text="@string/nsdk_string_offline_data_start_down_confirm" />
+    </LinearLayout>
+</merge>

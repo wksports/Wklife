@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/route_tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/multi_tabs_container"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:orientation="horizontal">
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.multi.SpeedyMultiRouteTabItem
+                android:id="@+id/multi_tabs_one"
+                style="@style/MultiRouteTabItem" />
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.multi.SpeedyMultiRouteTabItem
+                android:id="@+id/multi_tabs_two"
+                style="@style/MultiRouteTabItem" />
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.multi.SpeedyMultiRouteTabItem
+                android:id="@+id/multi_tabs_three"
+                style="@style/MultiRouteTabItem" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/single_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="63dp">
+
+            <com.baidu.navisdk.module.routeresultbase.view.support.module.routetab.item.single.SpeedySingleRouteTabItem
+                android:id="@+id/single_tab"
+                style="@style/SingleRouteTabItem" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/route_tab_view"
+        android:background="#eaeaea" />
+
+    <com.baidu.navisdk.module.motorbike.view.support.module.routetab.MotorRRBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/divider" />
+
+</merge>

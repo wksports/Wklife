@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnav_rg_cp_traffic_panel"
+    android:layout_width="@dimen/nsdk_rg_control_panel_btn_width"
+    android:layout_height="@dimen/nsdk_rg_control_panel_btn_height"
+    android:background="@drawable/nsdk_rg_selector_common_control_btn_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <ImageView
+        android:id="@+id/nsdk_img_text_img"
+        android:layout_width="@dimen/navi_dimens_28dp"
+        android:layout_height="@dimen/navi_dimens_28dp"
+        android:scaleType="centerInside"
+        tools:src="@drawable/nsdk_drawable_rg_cp_voice_open_off" />
+
+    <TextView
+        android:id="@+id/nsdk_img_text_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nsdk_rg_control_button_text_margin_top"
+        android:textColor="@color/nsdk_cl_text_h"
+        android:textSize="@dimen/nsdk_rg_control_panel_btn_text_size"
+        android:textStyle="bold"
+        tools:text="@string/nsdk_string_its_name" />
+</merge>
+

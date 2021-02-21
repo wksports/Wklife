@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <translate
+        android:duration="1000"
+        android:fillAfter="true"
+        android:fromYDelta="0%p"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:toYDelta="-100%p" />
+
+</set>

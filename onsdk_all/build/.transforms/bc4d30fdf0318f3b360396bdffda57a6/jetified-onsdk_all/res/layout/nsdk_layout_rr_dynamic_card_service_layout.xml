@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/long_dis_service_panel_support_item_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp"
+    android:background="@drawable/nsdk_long_dis_service_support_item_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="2dp"
+    android:paddingTop="2dp"
+    android:paddingRight="2dp"
+    android:paddingBottom="2dp" >
+
+    <ImageView
+        android:id="@+id/service_parking_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_parking" />
+
+    <ImageView
+        android:id="@+id/service_petrol_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_petrol" />
+
+    <ImageView
+        android:id="@+id/service_gas_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_gas" />
+
+    <ImageView
+        android:id="@+id/service_charge_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_charge" />
+
+    <ImageView
+        android:id="@+id/service_restaurant_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_restaurant"/>
+
+    <ImageView
+        android:id="@+id/service_toilet_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_toilet" />
+
+    <ImageView
+        android:id="@+id/service_repair_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_repair" />
+
+
+    <ImageView
+        android:id="@+id/service_supermarket_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_supermarket" />
+
+    <ImageView
+        android:id="@+id/service_entertainment_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bnav_long_dis_service_ic_entertainment" />
+</LinearLayout>

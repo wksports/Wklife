@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nsdk_future_trip_main_panel_mid_zone_height"
+    android:layout_marginTop="@dimen/navi_dimens_1dp"
+    tools:background="@android:color/holo_red_light"
+    tools:showIn="@layout/nsdk_layout_future_trip_main_panel">
+
+    <View
+        android:id="@+id/top_line"
+        style="@style/FutureTripMainPanelLineStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/navi_dimens_12dp"
+        android:layout_marginRight="@dimen/navi_dimens_12dp"
+        android:layout_marginBottom="@dimen/navi_dimens_105dp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/mid_line"
+        style="@style/FutureTripMainPanelLineStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/navi_dimens_12dp"
+        android:layout_marginRight="@dimen/navi_dimens_12dp"
+        android:layout_marginBottom="@dimen/navi_dimens_69dp"
+        android:visibility="visible"
+        tools:layout_centerInParent="true"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/vertical_mid_line"
+        android:layout_width="1.5dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="#000000"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/histogram"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@android:color/transparent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/histogram_recall_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:background="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/item_guide"
+        android:layout_width="@dimen/navi_dimens_107dp"
+        android:layout_height="@dimen/navi_dimens_17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/navi_dimens_74dp"
+        android:layout_marginBottom="@dimen/navi_dimens_33dp"
+        android:background="@drawable/nsdk_drawable_future_trip_histogram_item_guide"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/navi_dimens_10dp"
+        android:layout_marginRight="@dimen/navi_dimens_10dp"
+        android:layout_marginBottom="@dimen/navi_dimens_33dp"
+        android:background="#dadada"
+        tools:background="@drawable/nsdk_drawable_future_trip_dash_shape"
+        tools:layout_centerInParent="true" />
+
+
+    <!--y轴与与time的中心对齐-->
+    <ImageView
+        android:id="@+id/select_item_time_iv"
+        android:layout_width="@dimen/nsdk_future_trip_select_time_width"
+        android:layout_height="@dimen/nsdk_future_trip_select_time_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/nsdk_drawable_future_trip_item_select_time_bg"
+        android:visibility="visible" />
+
+    <!--unused,just for test-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/navi_dimens_9dp"
+        android:text="21:00出发"
+        android:textSize="@dimen/navi_dimens_11dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.baidu.navisdk.histogram.view.HistogramBottomHighLightView
+        android:id="@+id/histogram_bottom_select"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navi_dimens_33dp"
+        android:layout_alignParentBottom="true"
+        tools:background="@android:color/transparent"
+        tools:visibility="invisible" />
+
+
+</RelativeLayout>

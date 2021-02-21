@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/item_first_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/item_first"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/nsdk_drawable_route_result_slide_bar_parking" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/split_line_first"
+        android:layout_width="14dp"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:background="#EEEEEE" />
+
+    <FrameLayout
+        android:id="@+id/item_second_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/item_second"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/nsdk_drawable_route_result_slide_bar_weather" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/split_line_second"
+        android:layout_width="14dp"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:background="#EEEEEE" />
+
+    <FrameLayout
+        android:id="@+id/item_third_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/item_third"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/nsdk_drawable_route_result_slide_bar_time" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/split_line_third"
+        android:layout_width="14dp"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:background="#EEEEEE" />
+
+    <FrameLayout
+        android:id="@+id/item_fourth_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/item_fourth"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/nsdk_drawable_route_result_slide_bar_illegal_camera" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/split_line_fourth"
+        android:layout_width="14dp"
+        android:layout_height="1px"
+        android:layout_gravity="center_horizontal"
+        android:background="#EEEEEE" />
+
+    <FrameLayout
+        android:id="@+id/item_fifth_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/item_fifth"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            tools:src="@drawable/nsdk_drawable_route_result_slide_bar_route_detail" />
+    </FrameLayout>
+</merge>

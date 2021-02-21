@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nsdk_layout_route_sort_light_background">
+
+    <RelativeLayout
+        android:id="@+id/toolbox_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="工具箱"
+            android:textStyle="bold"
+            android:textColor="@color/nsdk_cl_text_a"
+            android:textSize="19dp" />
+
+        <ImageView
+            android:id="@+id/toolbox_close_panel_btn"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/nsdk_drawable_nearby_search_close"
+            android:scaleType="centerInside"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eaeaea" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expanded_toolbox_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#F2F2F2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:textColor="#999999"
+        android:text="@string/nsdk_route_result_toolbox_tips_text" />
+
+</LinearLayout>

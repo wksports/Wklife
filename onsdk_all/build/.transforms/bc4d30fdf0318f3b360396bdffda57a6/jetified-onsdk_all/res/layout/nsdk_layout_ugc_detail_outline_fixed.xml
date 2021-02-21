@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tssv_persistent_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nsdk_cl_bg_d"
+        android:orientation="vertical">
+
+    <include layout="@layout/nsdk_layout_ugc_detail_outline_title" />
+
+    <!-- 实景图 -->
+    <RelativeLayout
+            android:id="@+id/ugc_event_details_realistic_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navi_dimens_165dp"
+            android:layout_marginLeft="@dimen/nsdk_ugc_details_card_padding_left_right"
+            android:layout_marginTop="@dimen/navi_dimens_10dp"
+            android:layout_marginRight="@dimen/nsdk_ugc_details_card_padding_left_right"
+            android:background="@drawable/bnav_bg_ugc_panel_realistic_img"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+        <ImageView
+                android:layout_width="@dimen/navi_dimens_30dp"
+                android:layout_height="@dimen/navi_dimens_40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bnav_drawable_route_fullview_page_placeholder" />
+
+        <com.baidu.navisdk.ui.widget.RoundImageView
+                android:id="@+id/ugc_event_details_realistic_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:background="#000000"
+                app:roundedImageViewCornerRadius="@dimen/navi_dimens_5dp"
+                app:roundedImageViewSizeRadio="0"
+                tools:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/ugc_event_details_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/navi_dimens_8dp"
+            android:layout_marginTop="@dimen/navi_dimens_10dp"
+            android:layout_marginRight="@dimen/navi_dimens_8dp"
+            android:background="@drawable/nsdk_ugc_event_details_background"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/navi_dimens_15dp"
+            android:paddingBottom="@dimen/navi_dimens_10dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        <com.baidu.navisdk.module.ugc.eventdetails.view.BNRCEventDetailLabelsView
+                android:id="@+id/ugc_detail_labels_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- pgc 来源布局 -->
+    <include
+            android:id="@+id/layout_pgc_source"
+            layout="@layout/nsdk_layout_ugc_detail_outline_pgc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navi_dimens_18dp"
+            android:layout_marginLeft="@dimen/nsdk_ugc_details_card_padding_left_right"
+            android:layout_marginTop="@dimen/navi_dimens_18dp"
+            android:layout_marginRight="@dimen/nsdk_ugc_details_card_padding_left_right"
+            android:layout_marginBottom="@dimen/navi_dimens_18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<com.baidu.navisdk.module.future.widgets.FutureTripContainerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnav_cruise_menu"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nsdk_future_trip_main_panel_height"
+    android:layout_marginLeft="@dimen/navi_dimens_5dp"
+    android:layout_marginRight="@dimen/navi_dimens_5dp"
+    android:layout_marginBottom="@dimen/navi_dimens_5dp"
+    android:background="@drawable/nsdk_drawable_route_result_white_round_corner_bg"
+    android:orientation="vertical"
+    tools:background="#ffffff">
+
+    <!--面板顶部栏-->
+    <com.baidu.navisdk.module.future.panel.bottom.FutureTripMainPanelTopView
+        android:id="@+id/panel_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nsdk_future_trip_main_panel_top_zone_height"
+        android:layout_marginLeft="@dimen/navi_dimens_14dp"
+        android:layout_marginTop="@dimen/navi_dimens_12dp"
+        android:layout_marginRight="@dimen/navi_dimens_14dp"
+        android:layout_marginBottom="@dimen/navi_dimens_2dp" />
+
+    <!--顶部分割线-->
+    <View
+        android:id="@+id/top_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#EAEAEA"
+        android:visibility="gone" />
+
+    <include layout="@layout/nsdk_layout_future_trip_histogram" />
+
+    <!--顶部分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/navi_dimens_4dp"
+        android:background="#EAEAEA" />
+
+    <!--底部view-->
+    <RelativeLayout
+        android:id="@+id/panel_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nsdk_future_trip_main_panel_bottom_zone_height"
+        android:layout_marginBottom="@dimen/navi_dimens_2dp"
+        android:paddingLeft="@dimen/navi_dimens_10dp"
+        android:paddingRight="@dimen/navi_dimens_10dp"
+        android:visibility="visible"
+        tools:background="@android:color/holo_blue_bright"
+        tools:visibility="visible">
+        <!--底部正常view-->
+        <TextView
+            android:id="@+id/distance"
+            style="@style/FutureTripBottomTvStyle"
+            tools:text="100km" />
+
+        <TextView
+            android:id="@+id/light"
+            style="@style/FutureTripBottomTvStyle"
+            android:layout_marginLeft="@dimen/navi_dimens_8dp"
+            android:layout_toRightOf="@id/distance"
+            android:drawableLeft="@drawable/nsdk_future_trip_light"
+            android:drawablePadding="@dimen/navi_dimens_2dp"
+            tools:text="22"
+            tools:textColor="#28303a" />
+
+        <TextView
+            android:id="@+id/toll"
+            style="@style/FutureTripBottomTvStyle"
+            android:layout_marginLeft="@dimen/navi_dimens_8dp"
+            android:layout_toRightOf="@id/light"
+            android:drawableLeft="@drawable/nsdk_future_trip_toll"
+            android:drawablePadding="@dimen/navi_dimens_2dp"
+            tools:text="23" />
+
+        <TextView
+            android:id="@+id/add_to_task"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/navi_dimens_33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nsdk_future_trip_add_to_assistant_selector"
+            android:gravity="center"
+            android:paddingLeft="@dimen/navi_dimens_20dp"
+            android:paddingTop="@dimen/navi_dimens_2dp"
+            android:paddingRight="@dimen/navi_dimens_20dp"
+            android:paddingBottom="@dimen/navi_dimens_2dp"
+            android:text="@string/nsdk_future_trip_add_to_assistant"
+            android:textColor="@color/nsdk_future_trip_add_assistant_btn_text_selector"
+            android:textSize="@dimen/navi_dimens_13dp" />
+
+
+        <ImageView
+            android:id="@+id/loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/nsdk_future_trip_loading"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:text="loading"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+</com.baidu.navisdk.module.future.widgets.FutureTripContainerLinearLayout>

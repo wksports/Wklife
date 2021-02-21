@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baidu.navisdk.ui.widget.BNUIBoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNFrameLayout
+        android:id="@+id/speedy_preference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/navi_dimens_8dp"
+        android:paddingTop="@dimen/navi_dimens_10dp"
+        android:paddingRight="@dimen/navi_dimens_8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eaeaea" />
+
+    <com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNFrameLayout
+            android:id="@+id/speedy_tab_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNFrameLayout
+            android:id="@+id/speedy_bottom_loading"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+    </com.baidu.navisdk.module.routeresultbase.view.support.widgit.BNFrameLayout>
+
+</com.baidu.navisdk.ui.widget.BNUIBoundLinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nsdk_cruise_bottom_toolbar_top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nsdk_rg_bottom_panel_height">
+
+
+    <com.baidu.navisdk.ui.widget.BNImgTextViewLayout
+        android:id="@+id/nsdk_cruise_bottom_toolbar_top_quit"
+        android:layout_width="@dimen/navi_dimens_48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bnav_rg_toolbox_quit_pressed_bg"
+        app:nsdk_bn_imgtext_img_src="@drawable/nsdk_drawable_toolbox_icon_quit_nav"
+        app:nsdk_bn_imgtext_text="退出"
+        app:nsdk_bn_imgtext_text_size="@dimen/navi_dimens_12dp"
+        app:nsdk_bn_imgtext_text_color="@color/nsdk_cl_text_h"
+        app:nsdk_bn_imgtext_text_margin_top="@dimen/navi_dimens_1dp" />
+
+    <View
+        android:id="@+id/nsdk_cruise_bottom_toolbar_top_quit_divider"
+        style="@style/NavRGToolBoxItemDivider"
+        android:layout_height="@dimen/navi_dimens_29dp"
+        android:layout_alignRight="@id/nsdk_cruise_bottom_toolbar_top_quit"
+        android:layout_centerVertical="true"
+        android:background="@color/nsdk_cl_rg_bg_c" />
+
+
+    <com.baidu.navisdk.ui.widget.BNImgTextViewLayout
+        android:id="@+id/nsdk_cruise_bottom_toolbar_top_more"
+        android:layout_width="@dimen/navi_dimens_48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bnav_rg_toolbox_quit_pressed_bg"
+        app:nsdk_bn_imgtext_img_src="@drawable/nsdk_drawable_toolbox_icon_open_toolbox"
+        app:nsdk_bn_imgtext_text="更多"
+        app:nsdk_bn_imgtext_text_size="@dimen/navi_dimens_12dp"
+        app:nsdk_bn_imgtext_text_color="@color/nsdk_cl_text_h"
+        app:nsdk_bn_imgtext_text_margin_top="@dimen/navi_dimens_1dp" />
+
+    <View
+        android:id="@+id/nsdk_cruise_bottom_toolbar_top_more_divider"
+        style="@style/NavRGToolBoxItemDivider"
+        android:layout_height="@dimen/navi_dimens_29dp"
+        android:layout_alignLeft="@id/nsdk_cruise_bottom_toolbar_top_more"
+        android:layout_centerVertical="true"
+        android:background="@color/nsdk_cl_rg_bg_c" />
+
+
+    <TextView
+        android:id="@+id/nsdk_cruise_bottom_toolbar_top_distance_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/nsdk_cruise_bottom_toolbar_top_more_divider"
+        android:layout_toRightOf="@id/nsdk_cruise_bottom_toolbar_top_quit_divider"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/nsdk_cl_text_b_mm_title"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:textSize="@dimen/navi_dimens_18dp"
+        tools:text="已行驶66公里 12小时45分"
+        tools:visibility="visible" />
+
+</RelativeLayout>

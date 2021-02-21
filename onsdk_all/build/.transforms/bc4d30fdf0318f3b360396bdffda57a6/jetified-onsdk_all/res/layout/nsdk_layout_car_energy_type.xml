@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/energy_type_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/bnav_plate_input_panel_layout">
+
+    <TextView
+        android:id="@+id/energy_type_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="动力类型"
+        android:textColor="#333333"
+        android:textSize="@dimen/navi_dimens_14dp" />
+
+    <!--drawable left-->
+    <TextView
+        android:id="@+id/energy_type_0"
+        style="@style/EnergyType"
+        android:layout_marginLeft="@dimen/navi_dimens_81dp"
+        android:text="油车" />
+
+    <TextView
+        android:id="@+id/energy_type_1"
+        style="@style/EnergyType"
+        android:layout_marginLeft="@dimen/navi_dimens_10dp"
+        android:layout_toRightOf="@id/energy_type_0"
+        android:text="纯电动" />
+
+    <TextView
+        android:id="@+id/energy_type_2"
+        style="@style/EnergyType"
+        android:layout_marginLeft="@dimen/navi_dimens_10dp"
+        android:layout_toRightOf="@id/energy_type_1"
+        android:text="混合动力" />
+
+</RelativeLayout>

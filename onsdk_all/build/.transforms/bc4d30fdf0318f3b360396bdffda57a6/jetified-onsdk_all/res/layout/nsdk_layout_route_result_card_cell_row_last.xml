@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E4E4E4" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:textSize="12dp"
+        tools:text="附近仅2个空闲停车场"
+        android:layout_width="match_parent"
+        android:layout_height="37dp" />
+
+</merge>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/big_bubble_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/nsdk_drawable_rr_dynamic_card_middle_bubble"
+        tools:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/big_bubble_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            tools:src="@drawable/nsdk_drawable_route_result_weather_heavy_snow"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bubble_first_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#28303A"
+                android:textSize="12dp"
+                tools:text="许昌高速" />
+
+            <TextView
+                android:id="@+id/bubble_second_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="#28303A"
+                android:textSize="10dp"
+                android:visibility="visible"
+                tools:text="途径时大雪" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/small_bubble_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/small_bubble_icon"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            tools:src="@drawable/nsdk_drawable_route_result_weather_storm_rain"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_gravity="center"
+            android:textColor="#333333"
+            android:textSize="12dp"
+            tools:text="长白山"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+</FrameLayout>

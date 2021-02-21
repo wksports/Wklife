@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><!-- ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    tools:background="#000000ff">
+
+    <TextView
+        android:id="@+id/tag_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:textSize="9dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="#333333"
+        android:drawableLeft="@drawable/bnav_route_result_dynamic_card_histogram_tag_dot"
+        android:drawablePadding="5dp"
+        android:background="@drawable/bnav_route_result_dynamic_card_histogram_tag_bg"
+        tools:text="标签" />
+
+    <!--中位线，位置动态计算-->
+    <View
+        android:id="@+id/mid_line"
+        style="@style/FutureTripLineStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="23dp"
+        android:visibility="visible"
+        tools:layout_centerVertical="true"
+        tools:visibility="visible" />
+
+    <!--柱子-->
+    <LinearLayout
+        android:id="@+id/items_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/y_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+</RelativeLayout>

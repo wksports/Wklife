@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        tools:background="@android:color/holo_green_light"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/route_tab_item_time"
+            android:textSize="19dp"
+            android:singleLine="true"
+            tools:text="time"
+            android:textColor="@color/nsdk_route_result_tab_time_selector"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/route_tab_item_distance"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            tools:text="distance"
+            android:textColor="@color/nsdk_color_route_result_tab_traffic_info_selector"
+            android:gravity="center_vertical"
+            android:textSize="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sec_row"
+        tools:background="@android:color/holo_red_light"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/first_row"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/route_tab_item_traffic_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            tools:text="10"
+            tools:visibility="visible"
+            android:textColor="@color/nsdk_color_route_result_tab_traffic_info_selector"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="1px"
+            android:layout_height="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/nsdk_color_route_result_route_tab_divide_line" />
+
+        <TextView
+            android:id="@+id/route_tab_item_tolls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/nsdk_color_route_result_tab_traffic_info_selector"
+            android:textSize="12dp"
+            android:visibility="gone"
+            tools:text="distance"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</merge>

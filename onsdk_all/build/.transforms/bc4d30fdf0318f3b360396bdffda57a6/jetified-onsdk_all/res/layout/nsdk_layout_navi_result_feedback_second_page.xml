@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_result_fb_second_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navi_result_fb_second_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/nsdk_long_dis_service_panel_bg">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/navi_result_fb_page_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/nsdk_navi_result_fb_page_margin_horizontal"
+            android:layout_marginTop="12dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@+id/navi_result_fb_page_submit_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/navi_result_fb_page_exit_btn" />
+
+        <ImageView
+            android:id="@+id/navi_result_fb_page_exit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nsdk_drawable_nearby_search_close"
+            app:layout_constraintBottom_toTopOf="@+id/navi_result_fb_page_item_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/navi_result_fb_page_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/nsdk_navi_result_fb_page_margin_horizontal"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@id/navi_result_fb_page_exit_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/navi_result_fb_page_exit_btn"
+            app:layout_constraintEnd_toStartOf="@id/navi_result_fb_page_exit_btn"
+            tools:text="感谢您的反馈，我们会继续优化导航体验感谢您的反馈，我们会继续优化导航体验" />
+
+
+        <TextView
+            android:id="@+id/navi_result_fb_page_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginHorizontal="@dimen/nsdk_navi_result_fb_page_margin_horizontal"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/nsdk_navi_result_fb_submit_bg"
+            android:enabled="false"
+            android:gravity="center"
+            android:textColor="@color/nsdk_white_color"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/feedback_submit_frequency_tips" />
+
+        <View
+            android:id="@+id/navi_result_fb_page_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nsdk_navi_result_fb_page_submit_top"
+            android:background="@drawable/nsdk_white_transparent_gradient_bg"
+            app:layout_constraintBottom_toTopOf="@id/navi_result_fb_page_submit_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

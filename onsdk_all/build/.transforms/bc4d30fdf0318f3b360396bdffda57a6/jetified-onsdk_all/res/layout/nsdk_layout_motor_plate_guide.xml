@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:minWidth="280dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@drawable/nsdk_drawable_rg_setting_page_card_bg">
+
+    <ImageView
+        android:id="@+id/motor_plate_guide_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/nsdk_drawable_motor_plate_guide"/>
+
+    <TextView
+        android:id="@+id/motor_complete_info_txt"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/motor_complete_plate_info"
+        android:maxLines="1"
+        android:textColor="#333333"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/motor_complete_info_tip_txt"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/motor_complete_plate_info_tip"
+        android:maxLines="1"
+        android:textColor="#999999"/>
+
+
+    <TextView
+        android:id="@+id/motor_plate_guide_complete_btn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="@dimen/navi_dimens_10dp"
+        android:paddingRight="@dimen/navi_dimens_10dp"
+        android:background="@drawable/nsdk_truck_perimeter_report_btn_bg"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:text="@string/motor_complete_plate_info"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/motor_plate_guide_cancel_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/navi_dimens_10dp"
+        android:paddingRight="@dimen/navi_dimens_10dp"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:maxLines="1"
+        android:text="@string/nsdk_not_set_for_now"
+        android:textColor="#999" />
+</LinearLayout>

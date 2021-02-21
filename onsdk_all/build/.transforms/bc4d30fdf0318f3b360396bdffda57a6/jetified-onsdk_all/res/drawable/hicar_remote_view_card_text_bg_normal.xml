@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#0D9FFB" />
+    <corners
+        android:bottomLeftRadius="@dimen/hicar_ongoing_hicar_quit_navi_btn_bg"
+        android:bottomRightRadius="@dimen/hicar_ongoing_hicar_quit_navi_btn_bg"
+        android:topLeftRadius="@dimen/hicar_ongoing_hicar_quit_navi_btn_bg"
+        android:topRightRadius="@dimen/hicar_ongoing_hicar_quit_navi_btn_bg"/>
+    <stroke
+        android:width="@dimen/navi_dimens_1dp"
+        android:color="#0D9FFB" />
+</shape>

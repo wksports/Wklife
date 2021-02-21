@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.RelativeLayout"
+    tools:paddingTop="25dp"
+    tools:paddingBottom="8dp"
+    tools:layout_width="match_parent"
+    tools:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="30dp"
+        android:includeFontPadding="false"
+        android:textSize="19dp"
+        android:gravity="center_vertical"
+        android:textColor="#333333"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="建议16:00出发，耗时25分钟" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="22dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/tv"
+        android:layout_alignBottom="@+id/tv"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:src="@drawable/nsdk_drawable_route_result_slide_bar_weather" />
+
+    <TextView
+        android:id="@+id/sub_tv"
+        android:layout_below="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_alignLeft="@id/tv"
+        android:layout_marginRight="30dp"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="12dp"
+        android:gravity="center_vertical"
+        android:textColor="#333333"
+        tools:text="西二旗北路300米拥堵" />
+
+</merge>

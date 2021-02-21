@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nsdk_navi_result_fb_banner_height"
+    android:layout_marginTop="@dimen/nsdk_navi_result_fb_banner_margin_top"
+    android:layout_marginBottom="@dimen/nsdk_navi_result_fb_banner_margin_bottom"
+    android:background="@drawable/nsdk_nav_result_fb_banner_bg"
+    android:paddingHorizontal="10dp">
+
+    <ImageView
+        android:id="@+id/navi_result_feedback_success_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nsdk_icon_nav_result_fb_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="2"
+        android:text="@string/nsdk_navi_result_feedback_success_tip"
+        android:textColor="@color/nsdk_white_color"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/navi_result_feedback_success_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

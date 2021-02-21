@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:divider="@drawable/bnav_bg_future_trip_timing_panel_divider"
+    tools:layout_height="@dimen/nsdk_future_trip_main_panel_top_zone_height"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.widget.LinearLayout"
+    tools:showDividers="middle">
+
+    <include
+        android:id="@+id/left_timing_layout"
+        layout="@layout/nsdk_layout_future_trip_main_panel_top_timing"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/navi_dimens_60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/right_timing_layout"
+        layout="@layout/nsdk_layout_future_trip_main_panel_top_timing"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/navi_dimens_60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" />
+
+</merge>

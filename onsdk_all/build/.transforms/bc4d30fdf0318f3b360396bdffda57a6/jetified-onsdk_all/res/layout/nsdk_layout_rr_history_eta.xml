@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/his_eta_container"
+    android:orientation="vertical"
+    android:background="@drawable/nsdk_layout_route_sort_light_background">
+    <!--根布局高度代码中动态设置 -->
+
+    <RelativeLayout
+        android:id="@+id/eta_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="历史7天用时"
+            android:textStyle="bold"
+            android:textColor="@color/nsdk_cl_text_a"
+            android:textSize="19dp" />
+
+        <ImageView
+            android:id="@+id/eta_close_panel_btn"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/nsdk_drawable_nearby_search_close"
+            android:scaleType="centerInside"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eaeaea" />
+
+    <RelativeLayout
+        android:id="@+id/eta_content"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <RelativeLayout
+            android:id="@+id/eta_load_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/blank_space"
+            android:gravity="center"
+            tools:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/eta_loading_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/route_loading_15"
+                android:visibility="gone" />
+
+            <com.baidu.mapframework.widget.RouteLoadingView
+                android:id="@+id/eta_loading_dynamic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/eta_fail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:visibility="visible"
+            tools:background="#00ff00"
+            android:layout_below="@id/blank_space"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/fail_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/nsdk_drawable_rr_car_his_eta_fail" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fail_img"
+                android:layout_centerHorizontal="true"
+                android:visibility="visible"
+                tools:visibility="visible"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fail_left_tx"
+                    android:layout_below="@id/fail_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="加载失败，" />
+
+                <TextView
+                    android:id="@+id/fail_right_tx"
+                    android:layout_alignTop="@id/fail_left_tx"
+                    android:layout_toRightOf="@id/fail_left_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重试"
+                    android:textSize="14dp"
+                    android:textColor="#2c81ff" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/eta_bad_tx"
+                android:layout_below="@id/fail_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:textSize="14dp"
+                android:text="当前路线历史7天用时暂无数据" />
+
+            <TextView
+                android:id="@+id/eta_dis_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fail_img"
+                android:textSize="14dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                tools:visibility="gone"
+                android:text="路线距离小于5公里，暂不支持查询历史7天用时" />
+
+            <TextView
+                android:id="@+id/eta_seven_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                tools:visibility="gone"
+                android:layout_below="@id/fail_img"
+                android:layout_centerInParent="true"
+                android:text="当前路线历史7天用时暂无数据" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/nsdk_layout_rr_his_eta_show_container"
+            android:id="@+id/his_show_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="#0000ff"
+            tools:visibility="visible"
+            android:layout_below="@id/blank_space"
+            android:layout_marginTop="11dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#F2F2F2" />
+
+    <LinearLayout
+        android:id="@+id/to_future_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/future_trip_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:drawablePadding="5dp"
+            android:includeFontPadding="false"
+            android:drawableRight="@drawable/nsdk_drawable_route_result_eta_panel_to_future_trip"
+            android:text="@string/nsdk_future_trip_route_result_eta_panel_entrance"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+</LinearLayout>

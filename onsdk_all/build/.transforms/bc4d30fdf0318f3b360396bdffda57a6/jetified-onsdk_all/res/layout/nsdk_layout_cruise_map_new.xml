@@ -1,0 +1,147 @@
+<!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnav_cruise_ui_map_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:visibility="visible">
+
+    <com.baidu.navisdk.ui.widget.EmptyTopLayout
+        android:id="@+id/top_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
+    <ViewStub
+        android:id="@+id/bnav_cruise_guide_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_empty_view"
+        android:layout_marginLeft="@dimen/nsdk_cruise_page_margin_both"
+        android:layout_marginTop="@dimen/navi_dimens_20dp"
+        android:layout_marginRight="@dimen/nsdk_cruise_page_margin_both"
+        android:inflatedId="@id/bnav_cruise_guide_layout"
+        android:layout="@layout/nsdk_layout_cruise_guide_panel"
+        tools:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/speed_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bnav_cruise_guide_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/nsdk_cruise_page_margin_both"
+        android:layout_marginTop="@dimen/nsdk_cruise_page_top_btn_margin_top">
+        <!-- 车速码表 -->
+        <com.baidu.navisdk.ui.speed.SpeedView
+            android:id="@+id/speed_view"
+            android:layout_width="@dimen/nsdk_rg_cur_car_speed_anim_panel_size"
+            android:layout_height="@dimen/nsdk_rg_cur_car_speed_anim_panel_size" />
+
+        <com.baidu.navisdk.ui.speed.interval.IntervalSpeedViewV2
+            android:id="@+id/interval_speed_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <!--路况开关-->
+    <com.baidu.navisdk.ui.widget.BNImgTextViewLayout
+        android:id="@+id/bnav_cruise_road_traffic_switch"
+        android:layout_width="@dimen/nsdk_rg_control_panel_btn_width"
+        android:layout_height="@dimen/nsdk_rg_control_panel_btn_height"
+        android:layout_below="@id/bnav_cruise_guide_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/nsdk_cruise_page_top_btn_margin_top"
+        android:layout_marginRight="@dimen/navi_dimens_3dp"
+        android:background="@drawable/nsdk_rg_selector_common_control_btn_bg"
+        android:visibility="gone"
+        app:nsdk_bn_imgtext_img_src="@drawable/nsdk_drawable_common_btn_traffic_off"
+        app:nsdk_bn_imgtext_text="路况"
+        app:nsdk_bn_imgtext_text_size="@dimen/navi_dimens_10dp"
+        tools:visibility="visible" />
+
+
+    <!--播报开关-->
+    <com.baidu.navisdk.ui.widget.BNImgTextViewLayout
+        android:id="@+id/bnav_cruise_play_switch"
+        android:layout_width="@dimen/nsdk_rg_control_panel_btn_width"
+        android:layout_height="@dimen/nsdk_rg_control_panel_btn_height"
+        android:layout_below="@id/bnav_cruise_road_traffic_switch"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/nsdk_rg_control_panel_btn_margin_top"
+        android:layout_marginRight="@dimen/navi_dimens_3dp"
+        android:background="@drawable/nsdk_rg_selector_common_control_btn_bg"
+        android:visibility="gone"
+        app:nsdk_bn_imgtext_img_src="@drawable/nsdk_drawable_rg_cp_voice_open_off"
+        app:nsdk_bn_imgtext_text="巡航播报"
+        app:nsdk_bn_imgtext_text_size="@dimen/navi_dimens_10dp"
+        tools:visibility="visible" />
+
+    <!--播报开关菜单-->
+    <ViewStub
+        android:id="@+id/bnav_cruise_cp_voice_menu_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nsdk_rg_control_panel_btn_height"
+        android:layout_below="@id/bnav_cruise_road_traffic_switch"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/nsdk_rg_control_panel_btn_margin_top"
+        android:layout_marginRight="@dimen/navi_dimens_3dp"
+        android:inflatedId="@id/bnav_cruise_cp_voice_menu_stub"
+        android:layout="@layout/nsdk_layout_cruise_nav_play_menu"
+        tools:visibility="visible" />
+
+    <include
+        android:id="@+id/map_scale_level_layout"
+        layout="@layout/nsdk_layout_scale_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/nsdk_cruise_page_margin_both"
+        android:layout_marginBottom="@dimen/navi_dimens_73dp" />
+
+    <!--缩放-->
+    <include
+        android:id="@+id/bnav_cruise_zoom_in_out"
+        layout="@layout/nsdk_layout_cruise_nav_zoom_in_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/navi_dimens_3dp"
+        android:layout_marginBottom="@dimen/navi_dimens_70dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/cruise_fade_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nsdk_cl_rg_bg_a"
+        android:elevation="@dimen/nsdk_cruise_toolbar_elevation"
+        android:visibility="gone" />
+
+    <com.baidu.navisdk.cruise.view.toolbar.views.CruiseOuterScrollView
+        android:id="@+id/cruise_bottom_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nsdk_rg_transparent"
+        android:elevation="@dimen/nsdk_cruise_toolbar_elevation"
+        android:paddingLeft="@dimen/nsdk_cruise_page_margin_both"
+        android:paddingRight="@dimen/nsdk_cruise_page_margin_both"
+        android:paddingBottom="@dimen/nsdk_cruise_page_margin_both" />
+
+    <ViewStub
+        android:id="@+id/open_the_door_for_me"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/nsdk_layout_criuse_debug_open_the_door" />
+
+</RelativeLayout>

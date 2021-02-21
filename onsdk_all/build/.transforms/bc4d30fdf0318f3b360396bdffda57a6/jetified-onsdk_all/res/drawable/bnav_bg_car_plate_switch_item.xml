@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FAFCFE" />
+
+    <corners android:radius="@dimen/navi_dimens_9dp" />
+
+    <size
+        android:width="@dimen/navi_dimens_138dp"
+        android:height="@dimen/navi_dimens_106dp" />
+    <stroke
+        android:color="#D8DBE1"
+        android:width="@dimen/navi_dimens_1dp"
+        android:dashWidth="@dimen/navi_dimens_4dp"
+        android:dashGap="@dimen/navi_dimens_4dp" />
+</shape>

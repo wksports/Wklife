@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/navi_dimens_116dp"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="@dimen/navi_dimens_10dp">
+
+    <TextView
+        android:id="@+id/nsdk_route_sort_item_tv"
+        android:layout_width="@dimen/navi_dimens_100dp"
+        android:layout_height="@dimen/navi_dimens_32dp"
+        android:layout_gravity="center"
+        android:background="@drawable/nsdk_drawable_speedy_preference_normal"
+        android:gravity="center"
+        android:lines="1"
+        android:padding="@dimen/navi_dimens_5dp"
+        android:text="@string/nsdk_string_route_sort_item_default"
+        android:textColor="@color/nsdk_route_sort_item_text"
+        android:textSize="@dimen/navi_dimens_13dp" />
+
+</FrameLayout>

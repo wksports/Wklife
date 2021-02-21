@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bnav_rg_toolbox_resume_switch_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bnav_rg_bg_tool_box_no_alpha"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/bnav_rg_toolbox_resume_tv"
+        android:layout_width="@dimen/navi_dimens_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/nsdk_string_rg_resume_navigator"
+        android:textColor="@color/nsdk_cl_text_a_mm"
+        android:textSize="@dimen/navi_dimens_18dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/bnav_rg_toolbox_resume_switch_line_divider"
+        android:layout_width="1px"
+        android:layout_height="@dimen/navi_dimens_25dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/nsdk_cl_bg_d_mm" />
+
+    <TextView
+        android:id="@+id/bnav_rg_toolbox_switch_route_tv"
+        android:layout_width="@dimen/navi_dimens_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/nsdk_string_rg_switch_navigator"
+        android:textColor="@color/nsdk_cl_text_g"
+        android:textSize="@dimen/navi_dimens_18dp"
+        android:textStyle="bold" />
+</LinearLayout>

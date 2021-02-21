@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_walk" type="id" />
+    <item name="btn_bike" type="id" />
+    <item name="btn_drive" type="id" />
+</resources>

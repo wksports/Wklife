@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bnav_route_banner_yellow_red_bg">
+
+    <LinearLayout
+        android:id="@+id/yellow_banner_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/nsdk_rr_yellow_banner_margin_left"
+        android:layout_marginRight="@dimen/nsdk_rr_yellow_banner_margin_left"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/yellow_tips_iv"
+            android:layout_width="@dimen/nsdk_rr_yellow_banner_icon_width"
+            android:layout_height="@dimen/nsdk_rr_yellow_banner_icon_width"
+            android:layout_marginLeft="@dimen/nsdk_rr_yellow_banner_icon_margin_left"
+            android:layout_marginRight="@dimen/nsdk_rr_yellow_banner_icon_margin_right"
+            android:scaleType="fitXY" />
+
+        <!--缺陷:超长并未以 ... 结束-->
+        <TextView
+            android:id="@+id/yellow_tips_tv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:gravity="center_vertical"
+            android:textSize="14dp"
+            tools:text="谁特么买小米儿谁特么买小米儿谁特么买小米儿谁特么买小米儿"
+            android:textColor="#ffffff"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/yellow_tips_close_iv"
+            android:layout_width="@dimen/nsdk_rr_yellow_banner_icon_width"
+            android:layout_height="28dp"
+            android:scaleType="fitXY"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/bnav_route_banner_yellow_tips_close" />
+    </LinearLayout>
+</RelativeLayout>

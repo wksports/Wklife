@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@android:color/white"
+android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/type_array"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/calc_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始算路" />
+
+    <TextView
+        android:id="@+id/calc_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="算路成功0次"/>
+
+    <TextView
+        android:id="@+id/calc_normal_fail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="算路通用失败0次"/>
+
+    <TextView
+        android:id="@+id/calc_engine_fail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="算路引擎失败0次"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/search_success"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="搜索成功0次"/>-->
+
+    <TextView
+        android:id="@+id/calc_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="取消算路0次"/>
+
+    <TextView
+        android:id="@+id/calc_POIlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="算路多结果0次"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/update_success"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="更新成功0次"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/update_fail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="更新失败0次"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/guide_success"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="诱导成功0次"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/guide_fail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="诱导失败0次"/>-->
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <FrameLayout
+        android:id="@+id/anchor_container"
+        android:layout_width="65dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:background="@drawable/nsdk_drawable_route_result_slide_bar_bubble"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="58dp"
+            android:layout_height="56dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/anchor_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                tools:src="@drawable/nsdk_drawable_route_result_slide_bar_parking" />
+
+            <TextView
+                android:id="@+id/anchor_describe"
+                android:layout_width="48dp"
+                android:layout_height="16dp"
+                android:gravity="center"
+                android:layout_below="@id/anchor_icon"
+                android:layout_marginTop="1dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="10dp"
+                android:textColor="#ffffff"
+                android:singleLine="true"
+                android:ellipsize="end"
+                tools:text="路线详情"
+                tools:textColor="#333333" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <com.baidu.navisdk.module.routeresultbase.view.support.module.slidebar.AnchorListView
+        android:id="@+id/anchor_list_view"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/anchor_container"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:background="@drawable/nsdk_drawable_route_result_slide_bar_background" />
+
+</merge>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@android:color/black">
+
+    <com.baidu.navisdk.module.routeresult.view.support.widget.MaxHeightRelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/nsdk_drawable_route_result_bottom_background">
+
+        <RelativeLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navi_dimens_64dp"
+                android:paddingLeft="@dimen/navi_dimens_19dp"
+                android:paddingRight="@dimen/navi_dimens_24dp">
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="路线详解"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/navi_dimens_19dp"
+                    android:textStyle="bold" />
+
+            <ImageView
+                    android:id="@+id/close_img"
+                    android:layout_width="@dimen/navi_dimens_11dp"
+                    android:layout_height="@dimen/navi_dimens_11dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bnav_drawable_route_fullview_close" />
+        </RelativeLayout>
+
+        <View
+                android:id="@+id/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/top_layout"
+                android:background="#EEEEEE" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shadow" />
+    </com.baidu.navisdk.module.routeresult.view.support.widget.MaxHeightRelativeLayout>
+</RelativeLayout>

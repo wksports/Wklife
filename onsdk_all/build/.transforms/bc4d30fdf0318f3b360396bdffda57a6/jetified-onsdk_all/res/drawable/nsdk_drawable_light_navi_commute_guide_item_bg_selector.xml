@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright (C) 2019 Baidu, Inc. All Rights Reserved.
+  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@android:color/holo_red_dark" />
+            <corners android:radius="@dimen/navi_dimens_3dp" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@android:color/holo_blue_dark" />
+            <corners android:radius="@dimen/navi_dimens_3dp" />
+        </shape>
+    </item>
+</selector>

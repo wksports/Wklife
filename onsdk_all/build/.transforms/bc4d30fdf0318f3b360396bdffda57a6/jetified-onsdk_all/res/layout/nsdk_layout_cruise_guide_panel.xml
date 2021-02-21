@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 Baidu, Inc. All Rights Reserved.
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/nsdk_cruise_toolbar_elevation"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/navi_dimens_60dp"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/navi_dimens_6dp"
+    android:paddingTop="@dimen/navi_dimens_6dp"
+    android:paddingRight="@dimen/navi_dimens_6dp"
+    android:paddingBottom="@dimen/navi_dimens_6dp">
+
+
+    <ImageView
+        android:id="@+id/bnav_cruise_guide_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        tools:src="@drawable/nsdk_cruise_gps_loser_icon" />
+
+    <TextView
+        android:id="@+id/bnav_cruise_guide_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/navi_dimens_6dp"
+        android:layout_marginLeft="@dimen/navi_dimens_6dp"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textSize="@dimen/navi_dimens_16dp"
+        tools:text="手机卫星信号弱，位置更新可能延迟"
+        tools:textColor="@android:color/holo_red_dark" />
+
+</LinearLayout>

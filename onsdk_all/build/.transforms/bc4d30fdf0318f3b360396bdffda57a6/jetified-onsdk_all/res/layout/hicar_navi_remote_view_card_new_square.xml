@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_hicar_card_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.95"
+    android:background="@drawable/hicar_navi_remote_view_card_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/navi_dimens_14dp"
+        android:paddingLeft="@dimen/navi_dimens_14dp"
+        android:paddingTop="@dimen/navi_dimens_6dp"
+        android:paddingBottom="@dimen/navi_dimens_14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/navi_dimens_14dp"
+                android:layout_height="@dimen/navi_dimens_14dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/hicar_ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="百度地图"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/navi_dimens_14dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <!--模糊导航-->
+            <LinearLayout
+                android:id="@+id/hicar_fuzzy_container_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/hicar_fuzzy_direction_iv"
+                    android:layout_width="@dimen/navi_dimens_63dp"
+                    android:layout_height="@dimen/navi_dimens_63dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/bnav_drawable_set_off" />
+
+                <TextView
+                    android:id="@+id/hicar_fuzzy_road_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:layout_marginTop="6dp"
+                    android:text="请行驶到百度大厦出口"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/navi_dimens_16dp" />
+
+            </LinearLayout>
+
+            <!--普通路段导航-->
+            <LinearLayout
+                android:id="@+id/hicar_normal_container_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/hicar_normal_direction_iv"
+                    android:layout_width="@dimen/navi_dimens_58dp"
+                    android:layout_height="@dimen/navi_dimens_58dp"
+                    android:scaleType="centerInside"
+                    android:layout_marginBottom="@dimen/navi_dimens_10dp"
+                    android:src="@drawable/nsdk_drawable_rg_ic_turn_along" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hicar_normal_distance_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_20dp" />
+
+                    <TextView
+                        android:id="@+id/hicar_after_label_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="米"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_20dp" />
+
+                    <TextView
+                        android:id="@+id/hicar_after_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="后"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_20dp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/navi_dimens_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hicar_into_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="进入"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_16dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/hicar_rg_ic_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nsdk_rg_main_info"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="@string/nsdk_string_hw_ic_code"
+                        android:textColor="#222830"
+                        android:textSize="@dimen/navi_dimens_16dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/hicar_normal_road_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="朱方路东路"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_16dp" />
+
+                    <TextView
+                        android:id="@+id/hicar_direction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:text="@string/bnav_string_hw_direction"
+                        android:textColor="@color/nsdk_text_rg_normal_info"
+                        android:textSize="@dimen/navi_dimens_16dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--顺沿路段导航-->
+            <LinearLayout
+                android:id="@+id/hicar_along_container_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/hicar_high_speed_direction_iv"
+                    android:layout_width="@dimen/navi_dimens_58dp"
+                    android:layout_height="@dimen/navi_dimens_58dp"
+                    android:scaleType="centerInside"
+                    android:layout_marginBottom="@dimen/navi_dimens_10dp"
+                    android:src="@drawable/nsdk_drawable_rg_ic_turn_along" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hicar_high_speed_distance_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_20dp" />
+
+                    <TextView
+                        android:id="@+id/hicar_cur_road_remain_dist_word_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="米"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/navi_dimens_3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="沿"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_16dp" />
+
+                    <TextView
+                        android:id="@+id/hicar_high_speed_road_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="当前道路"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="方向"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/navi_dimens_16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navi_dimens_34dp"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/navi_dimens_6dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hicar_quit_navi_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/navi_dimens_34dp"
+                android:gravity="center"
+                android:text="结束导航"
+                android:background="@drawable/hicar_remote_view_card_quit_navi_bg"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/navi_dimens_17dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
