@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="200dp"
 
-        android:text="笔记"
+        android:text="便签"
         android:textColor="#F44336"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
