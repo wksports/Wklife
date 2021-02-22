@@ -10,7 +10,7 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawe_layout"
         android:layout_width="match_parent"
-        android:layout_height="670dp">
+        android:layout_height="560dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -20,7 +20,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-
                 >
 
             </Toolbar>
